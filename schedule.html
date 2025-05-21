@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generated Study Schedule</title>
+</head>
+<body>
+  <h2>Your Study Schedule</h2>
+  <% Object.entries(schedule).forEach(([date, tasks]) => { %>
+    <h3><%= date %></h3>
+    <ul>
+      <% tasks.forEach(task => { %>
+        <li><%= task.subject %> - <%= task.hours %> hour(s)</li>
+      <% }) %>
+    </ul>
+  <% }) %>
+  <br>
+  <a href="/">Create New Schedule</a>
+</body>
+</html>
