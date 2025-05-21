@@ -22,8 +22,11 @@ TECHNOLOGIES USED:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 EXAMPLE:
+   
    Enter subjects like "Math" or "Science" along with total hours and deadlines.
+   
    Enter the number of hours you can study per day.
+   
    The app will display a daily schedule until your deadlines are met.
    
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
