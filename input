@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Scheduler</title>
+</head>
+<body>
+  <h2>Enter Study Plan</h2>
+  <form action="/schedule" method="POST">
+    <div id="subjects">
+      <div class="subject">
+        <input name="subjects[0][name]" placeholder="Subject">
+        <input name="subjects[0][hours]" type="number" placeholder="Total Hours">
+        <input name="subjects[0][deadline]" type="date">
+      </div>
+    </div>
+    <button type="button" onclick="addSubject()">Add Subject</button><br><br>
+    <input name="dailyHours" type="number" placeholder="Hours per day" required>
+    <button type="submit">Generate Schedule</button>
+  </form>
+
+  <script>
+    let i = 1;
+    function addSubject() {
+      const container = document.getElementById('subjects');
+      const html = `
+        <div class="subject">
+          <input name="subjects[${i}][name]" placeholder="Subject">
+          <input name="subjects[${i}][hours]" type="number" placeholder="Total Hours">
+          <input name="subjects[${i}][deadline]" type="date">
+        </div>`;
+      container.insertAdjacentHTML('beforeend', html);
+      i++;
+    }
+  </script>
+</body>
+</html>
